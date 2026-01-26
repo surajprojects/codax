@@ -1,11 +1,18 @@
 {
-  "extends": "@workspace/typescript-config/react-library.json",
+  "extends": "@codax/typescript-config/react-library.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@workspace/ui/*": ["./src/*"]
+      "@codax/ui/*": [
+        "./src/*"
+      ]
     }
   },
-  "include": ["."],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "."
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
