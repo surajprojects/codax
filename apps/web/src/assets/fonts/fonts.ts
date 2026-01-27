@@ -1,0 +1,15 @@
+import { Inter, JetBrains_Mono } from "next/font/google";
+
+export const inter = Inter({
+    subsets: ["latin"],
+    weight: ["100", "300", "400", "500", "600", "700", "800", "900"],
+    variable: "--font-inter",
+    display: "swap",
+});
+
+export const jetBrainsMono = JetBrains_Mono({
+    subsets: ["latin"],
+    weight: ["100", "300", "400", "500", "600", "700", "800"],
+    variable: "--font-jetBrainsMono",
+    display: "swap",
+});

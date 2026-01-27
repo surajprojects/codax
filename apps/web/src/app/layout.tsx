@@ -1,30 +1,33 @@
-import { Geist, Geist_Mono } from "next/font/google"
+import "@codax/ui/globals.css";
+import { Metadata } from "next";
+import { inter } from "@/assets/fonts/fonts";
+import { Toaster } from "@codax/ui/components/sonner";
+import RootWrapper from "@/components/home/rootWrapper";
+import Header from "@/components/home/header";
+import Footer from "@/components/home/footer";
 
-import "@codax/ui/globals.css"
-import { Providers } from "@/components/providers"
-
-const fontSans = Geist({
-  subsets: ["latin"],
-  variable: "--font-sans",
-})
-
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-})
+export const metadata: Metadata = {
+  title: "Codax",
+  description: "A growing collection of free web tools for students, developers, and creators.",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
-        className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased `}
+        className={`${inter.className} flex flex-col min-h-screen`}
       >
-        <Providers>{children}</Providers>
+        <RootWrapper>
+          <Header />
+          {children}
+          <Footer />
+        </RootWrapper>
+        <Toaster position="bottom-right" />
       </body>
     </html>
-  )
-}
+  );
+};
