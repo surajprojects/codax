@@ -1,49 +1,57 @@
+import Link from "next/link";
 import Image from "next/image";
+import MobileHeader from "./mobileHeader";
 import logo from "@/assets/images/logo.png";
-import { Menu } from "lucide-react";
+import { HeaderLinksTypeList } from "@/utils/types/headerLinksType";
 
 export default function Header() {
-    return (
-        <>
-            <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-md px-6 md:px-20 lg:px-32 xl:px-96 flex justify-center items-center">
-                <div className="container flex h-14 md:h-16 items-center justify-between">
-                    {/* Logo */}
-                    <a href="/" className="flex items-center gap-2.5 group">
-                        <div className="size-6 flex items-center justify-center rounded-lg">
-                            <Image
-                                src={logo}
-                                width={100}
-                                height={100}
-                                alt="Codax Logo"
-                            />
-                        </div>
-                        <span className="text-xl font-semibold tracking-tight">
-                            codax
-                        </span>
-                    </a>
+  const navLinks: HeaderLinksTypeList = [
+    {
+      name: "tools",
+      path: "#tools",
+    },
+    {
+      name: "about",
+      path: "#about",
+    },
+  ];
+  return (
+    <>
+      <header className="fixed top-0 z-50 w-full glass">
+        <nav className="flex justify-between items-center px-6 md:px-12 py-3 mx-auto w-full xl:max-w-7xl">
+          {/* Logo & Title */}
+          <div className="text-md font-semibold tracking-tight whitespace-nowrap shrink flex items-center">
+            <div className="size-5 rounded-full mr-1.5">
+              <Image src={logo} width={700} height={700} alt="logo" preload={true} />
+            </div>
+            <Link href={"/"}>codax</Link>
+          </div>
 
-                    {/* Navigation */}
-                    <nav className="hidden md:flex items-center gap-6">
-                        <a href="#tools" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                            Tools
-                        </a>
-                        <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                            About
-                        </a>
-                        <a
-                            href="#subscribe"
-                            className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-                        >
-                            Get updates
-                        </a>
-                    </nav>
+          {/* Nav Links */}
+          <div className="hidden sm:flex text-muted text-xs font-medium items-center gap-x-4">
+            {navLinks.map((item, idx) => (
+              <Link
+                key={idx}
+                href={item.path}
+                className="hover:text-muted/90 transition-effect capitalize"
+              >
+                {item.name}
+              </Link>
+            ))}
 
-                    {/* Mobile menu placeholder */}
-                    <button className="md:hidden hover:bg-secondary rounded-lg transition-colors p-1.5 cursor-pointer">
-                        <Menu className="size-5" />
-                    </button>
-                </div>
-            </header>
-        </>
-    );
-};
+            {/* CTA */}
+            <Link
+              href="#getupdates"
+              className="flex justify-center items-center text-primary rounded-lg btn hover:text-primary/90 capitalize"
+            >
+              get updates
+            </Link>
+          </div>
+
+          {/* Mobile Header */}
+          <MobileHeader navLinks={navLinks} />
+        </nav>
+      </header>
+    </>
+  );
+}

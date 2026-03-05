@@ -154,3 +154,31 @@
     @apply bg-background text-foreground;
   }
 }
+
+@theme {
+  --color-primary: #2563eb;
+  --color-secondary: #f3f4f6;
+  --color-muted: #656c7b;
+  --color-foreground: #21242c;
+}
+
+@layer components {
+  .btn {
+    @apply cursor-pointer transition duration-300 ease-in-out;
+  }
+
+  .transition-effect {
+    @apply transition duration-300 ease-in-out;
+  }
+
+  .glass {
+    @apply bg-white/30 backdrop-blur-sm border-b border-white/10 shadow-sm;
+  }
+  .section-wrapper {
+    @apply mx-auto w-full xl:max-w-7xl px-4 py-20 md:px-8 scroll-mt-8;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

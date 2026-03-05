@@ -1,4 +1,4 @@
-import { config } from "@codax/eslint-config/react-internal"
+import { config } from "@codax/eslint-config/react-internal";
 
 /** @type {import("eslint").Linter.Config} */
-export default config
+export default config;
