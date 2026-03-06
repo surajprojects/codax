@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
 
           {/* Bottom bar */}
-          <div className="mt-8 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-4 text-xs text-muted-foreground">
+          <div className="mt-6 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-4 text-xs text-muted-foreground">
             <p>&copy; {currentYear} Codax. Built by TigerxInsights.</p>
             <p className="font-mono">Made with ❤️ shipped from the cloud ☁️</p>
           </div>

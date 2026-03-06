@@ -1,11 +1,15 @@
-import { Hero } from "@/components/home/hero";
+import Hero from "@/components/home/hero";
+import Tools from "@/components/home/tools";
 
 export default function Home() {
   return (
     <>
-      <div className="grow">
+      <section className="w-full pt-[3.8rem]">
+        {/* Hero */}
         <Hero />
-      </div>
+        {/* Tools */}
+        <Tools />
+      </section>
     </>
   );
 }
