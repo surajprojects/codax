@@ -22,7 +22,7 @@ export default function Hero() {
         </div>
 
         {/* CTA */}
-        <div className="mx-auto w-xs grid grid-cols-2 gap-3 sm:gap-4">
+        <div className="mx-auto w-full max-w-xs grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Link
             href="#"
             className="flex items-center justify-center gap-1.5 text-xs sm:text-sm bg-primary text-white py-2.5 sm:py-3 w-full rounded-xl font-semibold btn shadow-xs hover:shadow-sm"
