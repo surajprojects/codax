@@ -1,8 +1,8 @@
-import GetUpdates from "@/components/home/getUpdates";
 import Hero from "@/components/home/hero";
-import HowItWorks from "@/components/home/howItWorks";
 import Tools from "@/components/home/tools";
 import WhyCodax from "@/components/home/whyCodax";
+import GetUpdates from "@/components/home/getUpdates";
+import HowItWorks from "@/components/home/howItWorks";
 
 export default function Home() {
   return (

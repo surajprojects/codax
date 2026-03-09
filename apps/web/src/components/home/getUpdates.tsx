@@ -13,7 +13,7 @@ export default function GetUpdates() {
         <SectionHeader title={getUpdatesData.title} description={getUpdatesData.description} />
         {/* Body */}
         <GetUpdatesForm />
-        <p className="text-center text-[0.60rem] text-muted">
+        <p className="text-center text-xs text-muted">
           Unsubscribe anytime. We respect your inbox.
         </p>
       </section>

@@ -94,9 +94,14 @@ export default function Tools() {
           {/* Section Header */}
           <SectionHeader title={toolsData.title} description={toolsData.description} />
           {/* Tags */}
-          <div className="flex items-center justify-center gap-3.5 my-10 mb-12">
+          <div className="flex flex-wrap items-center justify-center gap-3.5 my-10 mb-12">
             {tagsData.map((item, idx) => (
-              <Tag key={idx} icon={item.icon} name={item.name} />
+              <Tag
+                key={idx}
+                icon={item.icon}
+                name={item.name}
+                selected={item.name === "all tools"}
+              />
             ))}
           </div>
           {/* Body */}

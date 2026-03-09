@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 import { HeaderLinksTypeList } from "@/utils/types/headerLinksType";
 
 export default function MobileHeader({ navLinks }: { navLinks: HeaderLinksTypeList }) {
-  const [showMenu, setShowMenu] = useState<boolean>(true);
+  const [showMenu, setShowMenu] = useState<boolean>(false);
   return (
     <>
       <button

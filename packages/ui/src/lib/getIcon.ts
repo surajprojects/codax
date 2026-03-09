@@ -16,7 +16,10 @@ import {
   LayoutGrid,
   RefreshCcw,
   Calculator,
+  CirclePlay,
+  MousePointer,
   ClipboardList,
+  MessageSquare,
 } from "lucide-react";
 
 export interface IconData {
@@ -47,7 +50,10 @@ export type IconName =
   | "RefreshCcw"
   | "LayoutGrid"
   | "Calculator"
-  | "ClipboardList";
+  | "CirclePlay"
+  | "MousePointer"
+  | "ClipboardList"
+  | "MessageSquare";
 
 export const iconsData: IconDataList = [
   { label: "Zap", icon: Zap },
@@ -66,5 +72,8 @@ export const iconsData: IconDataList = [
   { label: "LayoutGrid", icon: LayoutGrid },
   { label: "RefreshCcw", icon: RefreshCcw },
   { label: "Calculator", icon: Calculator },
+  { label: "CirclePlay", icon: CirclePlay },
+  { label: "MousePointer", icon: MousePointer },
   { label: "ClipboardList", icon: ClipboardList },
+  { label: "MessageSquare", icon: MessageSquare },
 ];

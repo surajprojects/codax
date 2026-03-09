@@ -13,7 +13,7 @@ export default function GetUpdatesForm() {
   };
   return (
     <>
-      <div className="w-full sm:w-md mx-auto flex items-center justify-center gap-2.5 my-4">
+      <div className="w-full sm:w-md mx-auto flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 my-4">
         <Input
           value={email}
           onChange={(evt) => setEmail(evt.target.value)}
