@@ -1,31 +1,49 @@
-# shadcn/ui monorepo template
+---
 
-This template is for creating a monorepo with shadcn/ui.
+# Codax
 
-## Usage
+Codax is a growing collection of free, fast, and privacy-friendly web tools designed for students, developers, and creators. The platform focuses on simplicity — no sign-ups, no unnecessary features, and no data tracking. Just open a tool and start using it instantly.
 
-```bash
-pnpm dlx shadcn@latest init
-```
+## Features
 
-## Adding components
+- Free browser-based tools (no installation required)
+- No authentication or sign-up required
+- Privacy-first approach (data stays in the browser)
+- Clean and minimal UI
+- Fast performance
+- Open-source friendly philosophy
+- Categorized tools for easy discovery
+- Growing tool ecosystem
 
-To add components to your app, run the following command at the root of your `web` app:
+## Tech Stack
 
-```bash
-pnpm dlx shadcn@latest add button -c apps/web
-```
+- React
+- TypeScript
+- Tailwind CSS
+- Next.js
 
-This will place the ui components in the `packages/ui/src/components` directory.
+## Deployment
 
-## Tailwind
+This web app is deployed using [Vercel](https://vercel.com/) by Tiger. You can access the live version here [Codax](https://codax.cloud)
 
-Your `tailwind.config.ts` and `globals.css` are already set up to use the components from the `ui` package.
+## ScreenShots
 
-## Using components
+![Screenshot](/public/codax-screenshot.jpg)
 
-To use the components in your app, import them from the `ui` package.
+## Installation & Setup
 
-```tsx
-import { Button } from "@workspace/ui/components/button";
-```
+1. Clone the repository
+2. Navigate to the folder
+3. Install dependencies
+4. Start the development server
+5. Open the app in your browser at http://localhost:3000
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Author
+
+Made with ❤️ by Tiger
+
+---
