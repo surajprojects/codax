@@ -1,6 +1,6 @@
 import Tag, { TagTypeList } from "@codax/ui/components/ui/tag";
-import ToolCard, { ToolCardTypeList } from "@codax/ui/components/cards/toolCard";
 import SectionHeader, { SectionHeaderType } from "@codax/ui/components/ui/sectionHeader";
+import ToolCard, { ToolCardTypeList } from "@codax/ui/components/cards/toolCard";
 
 export default function Tools() {
   const toolsData: SectionHeaderType = {
@@ -87,35 +87,29 @@ export default function Tools() {
       link: "#",
     },
   ];
+
   return (
     <>
-      <section id="tools" className="bg-secondary/50">
-        <div className="section-wrapper">
-          {/* Section Header */}
-          <SectionHeader title={toolsData.title} description={toolsData.description} />
-          {/* Tags */}
-          <div className="flex flex-wrap items-center justify-center gap-3.5 my-10 mb-12">
-            {tagsData.map((item, idx) => (
-              <Tag
-                key={idx}
-                icon={item.icon}
-                name={item.name}
-                selected={item.name === "all tools"}
-              />
-            ))}
-          </div>
-          {/* Body */}
-          <div className="w-full lg:w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {toolCardData.map((item, idx) => (
-              <ToolCard
-                key={idx}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-                link={item.link}
-              />
-            ))}
-          </div>
+      <section className="w-full grow py-24 pb-16">
+        {/* Section Header */}
+        <SectionHeader title={toolsData.title} description={toolsData.description} />
+        {/* Tags */}
+        <div className="flex flex-wrap items-center justify-center gap-3.5 my-10 mb-12">
+          {tagsData.map((item, idx) => (
+            <Tag key={idx} icon={item.icon} name={item.name} selected={item.name === "all tools"} />
+          ))}
+        </div>
+        {/* Body */}
+        <div className="w-full lg:w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {toolCardData.map((item, idx) => (
+            <ToolCard
+              key={idx}
+              icon={item.icon}
+              title={item.title}
+              description={item.description}
+              link={item.link}
+            />
+          ))}
         </div>
       </section>
     </>

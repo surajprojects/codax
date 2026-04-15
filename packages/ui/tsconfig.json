@@ -1,6 +1,8 @@
 {
   "extends": "@codax/typescript-config/react-library.json",
   "compilerOptions": {
+    "module": "es2015",
+    "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
       "@codax/ui/*": ["./src/*"]

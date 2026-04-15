@@ -8,11 +8,11 @@ export default function Header() {
   const navLinks: HeaderLinksTypeList = [
     {
       name: "tools",
-      path: "#tools",
+      path: "/#tools",
     },
     {
       name: "about",
-      path: "#whycodax",
+      path: "/#whycodax",
     },
   ];
   return (
@@ -41,7 +41,7 @@ export default function Header() {
 
             {/* CTA */}
             <Link
-              href="#getupdates"
+              href="/#getupdates"
               className="flex justify-center items-center text-primary rounded-lg btn hover:text-primary/90 capitalize"
             >
               get updates

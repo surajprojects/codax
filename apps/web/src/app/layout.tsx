@@ -26,7 +26,7 @@ export default function RootLayout({
             {children}
             <Footer />
           </RootWrapper>
-          <Toaster position="bottom-right" />
+          <Toaster position="top-center" />
         </body>
       </html>
     </>
